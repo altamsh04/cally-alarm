@@ -1,0 +1,17 @@
+{
+  "name": "cally",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Altamsh Bairagdar",
+  "license": "ISC",
+  "description": "A morning call app that uses Twilio to make calls with a custom message.",
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "node-cron": "^4.2.0",
+    "twilio": "^5.7.2"
+  }
+}
