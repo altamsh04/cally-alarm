@@ -2,6 +2,11 @@ require('dotenv').config();
 import twilio from 'twilio';
 
 export default async function handler(req, res) {
+  const { secret } = req.query;
+  if (secret !== process.env.CALL_SECRET) {
+    return res.status(403).json({ error: 'Unauthorized request' });
+  }
+
   const client = twilio(
     process.env.TWILIO_ACCOUNT_SID,
     process.env.TWILIO_AUTH_TOKEN
